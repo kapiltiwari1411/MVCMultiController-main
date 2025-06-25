@@ -43,7 +43,7 @@ public class welcomeform2Controller {
 	public String signupWithModelAttributee(@ModelAttribute userforform2 User,Model model) {
 		System.out.println("welcomeform.signupWithModelAttribute()");
 		User.setId(1);
-		model.addAttribute("User", User);
+		model.addAttribute("kuser", User);
 		userService.saveUser(User);
 		return "resultforform2";
 	}

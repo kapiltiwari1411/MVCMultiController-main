@@ -17,17 +17,23 @@ public class userforform2 implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id, experience;
-    private String username, mail, password;
+    private Integer id;
+
+    private int experience;
+    private String username;
+    private String mail;
+    private String password;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfBirth;
 
+    // Default constructor
     public userforform2() {
         super();
     }
 
-    public userforform2(int id, int experience, LocalDate dateOfBirth, String username, String mail, String password) {
+    // Parameterized constructor
+    public userforform2(Integer id, int experience, LocalDate dateOfBirth, String username, String mail, String password) {
         super();
         this.id = id;
         this.experience = experience;
@@ -37,13 +43,12 @@ public class userforform2 implements Serializable {
         this.password = password;
     }
 
-    // Getters and setters...
-
-    public int getId() {
+    // Getters and Setters
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
