@@ -19,8 +19,8 @@ public class welcomeform2Controller {
 	@Autowired
 	//used for injecting dependencies
 	private UserService userService;
-	 @RequestMapping("/MVCMultiController")
-	@GetMapping(value="/")
+	 @RequestMapping("/")
+	
 	public String welcome() {
 		System.out.println("welcomeform2.welcome()");
 		return "home";

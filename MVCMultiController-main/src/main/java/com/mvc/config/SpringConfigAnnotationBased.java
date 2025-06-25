@@ -42,7 +42,7 @@ public class SpringConfigAnnotationBased implements WebMvcConfigurer {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/java11");
         dataSource.setUsername("root");
-        dataSource.setPassword("root");
+        dataSource.setPassword("Kapil@2001");
         
         return dataSource;
     }

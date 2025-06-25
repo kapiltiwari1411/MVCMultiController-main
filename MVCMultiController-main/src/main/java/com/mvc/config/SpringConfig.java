@@ -19,8 +19,6 @@ public class SpringConfig implements WebMvcConfigurer{
 	
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver=new InternalResourceViewResolver();
-		//IT SPECIFIESTHAT JSTL VIEWS SHOULD BE USED
-		//JstlView IS A CLASS provided by the spring FRAMEWORK THAT IS SPECIFICALLY DESIGNED TO HANDLE JSP PAGES USING JSTL
 		
 		
 		viewResolver.setViewClass(JstlView.class);

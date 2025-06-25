@@ -1,7 +1,7 @@
 package com.mvc.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,78 +9,81 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
-public class userforform2 {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id, experience;
-	private String username, mail, password;
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate dateOfBirth;
-//	private LocalDateTime dateOfBirth;
+public class userforform2 implements Serializable {
 
-	public userforform2() {
-		super();
-	}
+    private static final long serialVersionUID = 1L;
 
-	public userforform2(int id, int experience, LocalDate dateOfBirth, String username, String mail, String password) {
-		super();
-		this.id = id;
-		this.experience = experience;
-		this.dateOfBirth = dateOfBirth;
-		this.username = username;
-		this.mail = mail;
-		this.password = password;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id, experience;
+    private String username, mail, password;
 
-	public int getId() {
-		return id;
-	}
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dateOfBirth;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public userforform2() {
+        super();
+    }
 
-	public int getExperience() {
-		return experience;
-	}
+    public userforform2(int id, int experience, LocalDate dateOfBirth, String username, String mail, String password) {
+        super();
+        this.id = id;
+        this.experience = experience;
+        this.dateOfBirth = dateOfBirth;
+        this.username = username;
+        this.mail = mail;
+        this.password = password;
+    }
 
-	public void setExperience(int experience) {
-		this.experience = experience;
-	}
+    // Getters and setters...
 
-	public String getUsername() {
-		return username;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getMail() {
-		return mail;
-	}
+    public int getExperience() {
+        return experience;
+    }
 
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public LocalDate getDateOfBirth() {
-		return dateOfBirth;
-	}
+    public String getMail() {
+        return mail;
+    }
 
-	public void setDateOfBirth(LocalDate dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
 
-	
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 }
